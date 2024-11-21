@@ -1,0 +1,484 @@
+/* Hector Rivera 
+   ISTE 240*/
+
+
+/* Hex Codes: #854d27, #dd7230, #f4c95d, #e7e393, #04030f */
+
+body{
+  margin:7%;
+  margin-top: -1%;
+  background-color:#f1f1f1;
+  font-family: sans-serif;
+}
+p{
+  line-height: 2;
+}
+.heading{
+  max-width: 400px;
+  margin: auto; 
+  margin-top: 8%;
+  text-align:center;
+
+}
+
+.bannerimg {  
+  width: 100%;
+  border: 1px solid #dd7230;
+  border-radius: 1%;
+  box-shadow: 1px 6px 14px 1px rgba(0,0,0,0.2);
+  margin-bottom: 5%; 
+  
+  /* make the anim take 2 seconds to cycle */
+  animation-duration: 6s;
+  /* allow it to cycle continuously */
+  animation-iteration-count: infinite;
+  animation-name: fade-in-anim;
+}
+
+.fade-in {
+  /* make the anim take 2 seconds to cycle */
+  animation-duration: 6s;
+  /* allow it to cycle continuously */
+  animation-iteration-count: infinite;
+  animation-name: fade-in-anim;
+}
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
+researched to find examples of how to have the images slowy transition; used the examples found
+in the above link to figure out how to apply it to my idea here.*/
+@keyframes fade-in-anim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*used flex to allow the contents...image and paragraph block to display
+next to eachother*/
+.sectioncontainer
+{
+    width: 100%;
+    display: flex;
+    flex-basis: auto;
+    margin-top: 20px;
+    
+}
+
+/*needed the buttons that would call the user to place cursor on (call to action).... to spread evenly across by
+setting the width 33.33%*/
+.sectiontop
+{    
+    width:25%;
+    box-sizing: border-box;    
+}
+/*a button is created to become the trigger element for the dropdown. The button lead the user to hover
+the cursor and discover*/
+.droplistbutton
+{
+        width: 100%;
+        background-color: #e8d4a1;
+        color:#854d27;
+        padding: 6px;  
+        font-size: 1rem;
+        border: none;
+        border: .5px solid #854d27;
+        cursor: pointer;
+        border-radius: 6px;
+        box-shadow: 1px 6px 14px 1px rgba(0,0,0,0.2);
+      
+}
+.dropdownlist
+{
+    list-style: none; 
+    width: 100%;   
+}
+.dropdownlistforfood
+{
+    position: relative;
+    display: inline-block;
+    margin-top:45px;
+    list-style: none;     
+}
+.dropdownlistblock 
+{
+    display: none;
+    position: absolute;
+    background-color: #e7e393;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(234, 222, 133, 0.2);
+    z-index: 1;
+    font-size:medium;
+    border-radius: 4%;
+        
+  }
+  .dropdownlinks li{
+    margin-top:10px;
+  }
+  .dropdownlinks
+  {
+    
+    color:black;
+    padding: 10px;
+    text-decoration: none;    
+    display: block;
+    list-style-type: none;
+    margin-left: -40px;
+    text-wrap: nowrap;
+    
+  }
+  .dropdownlinks ul{
+    list-style-type: none;
+  }
+  .dropdownlinks a{
+    
+    text-decoration: none;
+  }
+
+  .dropdownlinks a:link{
+    color: darkolivegreen;
+  }
+  .dropdownlinks a:visited{
+    color: blue;
+  }
+  .dropdownlistblock a:hover 
+  {
+    background-color: #f1f1f1;
+  }
+  .dropdownlist:hover .dropdownlistblock
+  {
+    display: block;
+  }
+  .dropdownlistforfood:hover .dropdownlistblock
+  {
+    display: block;
+    padding: 5%; 
+  }
+  .dropdownlist:hover .droplistbutton 
+  {
+    background-color: #dd7230;
+  }
+  .dropdownlistforfood:hover .droplistbutton 
+  {
+    background-color: #dd7230;
+  }
+  .smallbutton{
+    width:100px;
+        background-color: #e8d4a1;
+        border-radius: 6px;
+        border: .5px solid #854d27;
+        box-shadow: 1px 6px 14px 1px rgba(0,0,0,0.2);
+  }
+.bigcontainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid #dd7230;
+  border-radius: 1%;
+  box-shadow: 1px 6px 14px 1px rgba(0,0,0,0.2);
+  background-color: #e8d4a1;
+  width: 100%;
+  height: 100%;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+  position:relative;
+}
+
+.container:nth-child(odd){ 
+  flex-direction: row-reverse;
+  justify-content: center;
+
+}
+.littlecontainer{
+  width:70%;
+  margin: 10px;
+  height: 80%;
+}
+.littlecontainerneighborhood{
+  width:45%;
+  margin: 10px;
+  height: 80%;   
+}
+.littlecontainer p{
+  padding: 7px;
+  font-size: 1rem;
+  text-justify: inter-word;  
+}
+.littlecontainer h1{
+  padding: 2px;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 5px;
+}
+.container:nth-child(odd) .littlecontainer h1, .container:nth-child(odd) .littlecontainer p{
+  text-align: left;
+}
+.littleimage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:33%;
+  border-radius: 1%;
+  padding: 2%;
+  
+  
+
+}
+.littleimageneighborhood{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:45%;  
+  border-radius: 1%;
+  
+}
+.littleimage img{
+  /* height: 175px; */
+  max-width: 100%;
+  border-radius: 1%;  
+  box-shadow: 1px 6px 14px 1px rgba(0,0,0,0.2);
+  padding:2;
+  
+}
+.sectionfoodpictures{
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  margin-bottom: 5%;
+  flex-wrap: wrap;
+}
+.foodimages{
+  border: 1px solid #dd7230;
+  border-radius: 3%;
+  box-shadow: 1px 6px 14px 1px rgba(0,0,0,0.2);
+}
+.containerrestaurantmap{
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+.iframe{
+  border-radius: 8px;
+  border: 1px solid #dd7230;
+  box-shadow: 1px 6px 14px 1px rgba(0,0,0,0.2);
+ 
+}
+.sectionbottom{
+  display:flexbox;
+  box-sizing: border-box;
+  text-align: left;
+  justify-content: space-around;
+  margin-bottom: 1%;
+  
+
+  
+}
+.containerbackbutton{
+  box-sizing: border-box;
+}
+.buttonbacktotop{ 
+  background-color: #dd7230;
+  color:black;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* needed to use the same color as the body in order to hide the container outline
+  after trying to hide the strike through of the horizontal rule;  */
+  background-color: #f1f1f1;
+  margin-left: 5px;
+  margin-right: 5px;
+  /* searched how to center text; transform is a property; translate is a method that transform
+  accepts: it allowed me to center my text relative to the horizontal rule */
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;  
+}
+
+.horizontal-rule-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.horizontal-rule {
+  border-top: 4px solid #000; 
+  width: 100%;
+}
+.formdiv{
+  margin-top: 2em;
+  /* background-color: #e8d4a1;
+  border-color: brown;
+  border-radius: 5%; */
+  
+}
+.formbtn{
+  margin-top: 2em;
+  border-radius: 10px;
+  width: 60px;
+  font-size: small; 
+  background-color: chartreuse;  
+}
+
+.surveydiv{
+  display: flex;  
+  
+}
+.surveysmalldiv{
+  
+  width: 50%;
+  
+}
+.textarea{
+  width: 600px;;
+  height:150px;
+}
+.reviewmessage {
+  border: 1px solid #dd7230; /* Add border */
+  background-color: #e8d4a1; /* Add background color */
+  padding: 10px; /* Add padding for better spacing */
+  /* overflow: hidden; */
+  justify-content: center;
+  max-width: 100%;
+  /* flex-wrap: nowrap; */
+  word-wrap: break-word;
+}
+.reviewmessage p{
+  text-justify: inter-word;  
+}
+.nav-links {
+  display: flex; /* Ensure the navigation links are displayed as flex items */
+  justify-content: center; /* Horizontally center the navigation links */
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+
+
+  width: 100%;
+  
+    flex-basis: auto;
+    margin-top: 20px;
+}
+
+.nav-links li {
+  margin: 0 10px; /* Add some spacing between the navigation items */
+}
+.table{
+
+  width: 100%;
+
+}
+.table th{
+
+  padding: 10px;
+  text-align: center;
+
+}
+.table td{
+
+  padding: 10px;
+  text-align: center;
+
+}
+.table input[type="radio"] {
+  margin: 0;
+}
+@keyframes fadein {
+  0% {opacity:0;} 
+  100% {opacity:1;}
+}
+/* I want to hide the hamburger menu from all other devices accept for the mobile phone*/
+@media screen and (min-width: 768px) 
+{
+    .hamburgermenu {
+      display: none;
+  }
+   
+}
+
+@media only screen and (max-width: 768px) 
+{
+
+    .container 
+    {
+        /* max-width: 400px; */
+        flex-direction: column;
+        
+    }
+    .littlecontainer{
+      width: auto;
+    }
+    .littleimage{
+      width:auto;
+    }
+    .littleimage img{
+      align-self: center;
+
+    }
+    .container:nth-child(odd){
+      flex-direction: column;
+    }
+    .sectioncontainer{
+      flex-wrap:wrap;
+      display: flex;
+      
+      flex-direction: row;
+    }
+    .sectiontop{
+      width:100%;
+    }
+    /*trying to have the navigation elements stack in a column*/
+    .nav-links {
+      
+      flex-direction: column;
+      align-items: center; /* Optional: Center align the items */
+      display: none;
+  }
+
+    .nav-links li {
+      margin: 10px 0; /* Optional: Add some spacing between the items */
+  }
+  
+  .nav-links.show {
+    /* display: block; */
+
+    display: flex; /* Show the navigation links when the 'show' class is added */
+    flex-direction: column; /* Stack the links vertically */
+    position: absolute; /* Position the menu */
+    top: 50px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: #e7e393; /* Add background color */
+    border-radius: 3px; /* Add border radius */
+    padding: 10px; /* Add padding */
+    z-index: 1; /* Ensure the menu is on top of other elements */
+
+  }
+  .hamburgermenu{
+    display: block; /* Ensure the menu icon is always visible */
+    position: absolute; /* Position the icon */
+    top: 10px; /* Adjust top position as needed */
+    right: 10px; 
+    background-color: #e7e393;
+    border-radius: 3px;
+    border: none;
+
+    padding: 5px; /* Add padding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  
+}
+  
+
